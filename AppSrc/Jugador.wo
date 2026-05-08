@@ -1,0 +1,36 @@
+﻿// C:\DataFlex Projects\futbol\AppSrc\Jugador.wo
+// Mantenimiento de Jugador
+//
+
+Use cWebView.pkg
+Use cWebPanel.pkg
+
+Use cligaDataDictionary.dd
+Use cequipoDataDictionary.dd
+Use cjugadorDataDictionary.dd
+
+Object oJugador is a cWebView
+    Set piColumnCount to 12
+    Set psCaption to "Mantenimiento de Jugador"
+    Set piWidth to 700
+
+    Object oliga_DD is a cligaDataDictionary
+    End_Object 
+
+    Object oequipo_DD is a cequipoDataDictionary
+        Set DDO_Server To oliga_DD
+    End_Object 
+
+    Object ojugador_DD is a cjugadorDataDictionary
+        Set DDO_Server To oequipo_DD
+    End_Object 
+
+    Set Main_DD To ojugador_DD
+    Set Server  To ojugador_DD
+
+
+    Object oWebMainPanel is a cWebPanel
+        Set piColumnCount to 12
+    End_Object 
+
+End_Object 

@@ -1,0 +1,31 @@
+﻿// C:\DataFlex Projects\futbol\AppSrc\Equipo.wo
+// Mantenimiento deEquipo
+//
+
+Use cWebView.pkg
+Use cWebPanel.pkg
+
+Use cligaDataDictionary.dd
+Use cequipoDataDictionary.dd
+
+Object oEquipo is a cWebView
+    Set piColumnCount to 12
+    Set psCaption to "Mantenimiento deEquipo"
+    Set piWidth to 700
+
+    Object oliga_DD is a cligaDataDictionary
+    End_Object 
+
+    Object oequipo_DD is a cequipoDataDictionary
+        Set DDO_Server To oliga_DD
+    End_Object 
+
+    Set Main_DD To oequipo_DD
+    Set Server  To oequipo_DD
+
+
+    Object oWebMainPanel is a cWebPanel
+        Set piColumnCount to 12
+    End_Object 
+
+End_Object 

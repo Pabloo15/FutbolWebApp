@@ -1,0 +1,26 @@
+﻿// C:\DataFlex Projects\futbol\AppSrc\Posicion.wo
+// Mantenimiento de Posicion
+//
+
+Use cWebView.pkg
+Use cWebPanel.pkg
+
+Use cposicionDataDictionary.dd
+
+Object oPosicion is a cWebView
+    Set piColumnCount to 12
+    Set psCaption to "Mantenimiento de Posicion"
+    Set piWidth to 700
+
+    Object oposicion_DD is a cposicionDataDictionary
+    End_Object 
+
+    Set Main_DD To oposicion_DD
+    Set Server  To oposicion_DD
+
+
+    Object oWebMainPanel is a cWebPanel
+        Set piColumnCount to 12
+    End_Object 
+
+End_Object 

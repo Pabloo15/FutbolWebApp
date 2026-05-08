@@ -1,0 +1,26 @@
+﻿// C:\DataFlex Projects\futbol\AppSrc\Liga.wo
+// Mantenimiento de Liga
+//
+
+Use cWebView.pkg
+Use cWebPanel.pkg
+
+Use cligaDataDictionary.dd
+
+Object oLiga is a cWebView
+    Set piColumnCount to 12
+    Set psCaption to "Mantenimiento de Liga"
+    Set piWidth to 700
+
+    Object oliga_DD is a cligaDataDictionary
+    End_Object 
+
+    Set Main_DD To oliga_DD
+    Set Server  To oliga_DD
+
+
+    Object oWebMainPanel is a cWebPanel
+        Set piColumnCount to 12
+    End_Object 
+
+End_Object 

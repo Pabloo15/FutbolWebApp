@@ -1,5 +1,6 @@
 ﻿Use AllWebAppClasses.pkg
 Use cConnection.pkg
+Use cWebMenuItem.pkg
 
 Object oApplication is a cApplication
     Object oConnection is a cConnection
@@ -51,6 +52,61 @@ Object oWebApp is a cWebApp
 
                 Object oViewMenu is a cWebMenuItem
                     Set psCaption to C_$View
+
+                    Object oMantenimientodeJugadorItem1 is a cWebMenuItem
+                        Set psCaption to "Mantenimiento de Jugador"
+
+                        WebRegisterPath ntNavigateBegin oJugador
+
+                        Procedure OnClick
+                            Forward Send OnClick
+                                Send NavigatePath
+                        End_Procedure
+                    End_Object
+
+                    Object oMantenimientodeEquipoItem1 is a cWebMenuItem
+                        Set psCaption to "Mantenimiento deEquipo"
+
+                        WebRegisterPath ntNavigateBegin oEquipo
+
+                        Procedure OnClick
+                            Forward Send OnClick
+                                Send NavigatePath
+                        End_Procedure
+                    End_Object
+
+                    Object oMantenimientodeLigaItem1 is a cWebMenuItem
+                        Set psCaption to "Mantenimiento de Liga"
+
+                        WebRegisterPath ntNavigateBegin oLiga
+
+                        Procedure OnClick
+                            Forward Send OnClick
+                                Send NavigatePath
+                        End_Procedure
+                    End_Object
+
+                    Object oMantenimientodeEntrenadorItem1 is a cWebMenuItem
+                        Set psCaption to "Mantenimiento de Entrenador"
+
+                        WebRegisterPath ntNavigateBegin oEntrenador
+
+                        Procedure OnClick
+                            Forward Send OnClick
+                                Send NavigatePath
+                        End_Procedure
+                    End_Object
+
+                    Object oMantenimientodePosicionItem1 is a cWebMenuItem
+                        Set psCaption to "Mantenimiento de Posicion"
+
+                        WebRegisterPath ntNavigateBegin oPosicion
+
+                        Procedure OnClick
+                            Forward Send OnClick
+                                Send NavigatePath
+                        End_Procedure
+                    End_Object
                 End_Object
 
                 Object oSignOut_itm is a cWebMenuItem
@@ -132,6 +188,11 @@ Object oWebApp is a cWebApp
     Use WebResourceManager.wo
     
     Use Dashboard.wo
+    Use Jugador.wo
+    Use Equipo.wo
+    Use Liga.wo
+    Use Entrenador.wo
+    Use Posicion.wo
     Set phoDefaultView to oDashboard
 
 End_Object
